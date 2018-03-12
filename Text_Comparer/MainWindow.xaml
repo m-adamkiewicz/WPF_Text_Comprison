@@ -1,0 +1,38 @@
+﻿<Window x:Class="Text_Comparer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Text_Comparer"
+        mc:Ignorable="d"
+        Title="Text Files Comparison" Height="562" Width="755">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="46*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        
+        <Button Name="firstTextLoad" Grid.Column="0" Grid.Row="0" Margin="10,10,10,10" TextBlock.FontSize="20"
+                Click="firstTextLoad_Click" >Choose First Text File</Button>
+        <Button Name="secondTextLoad" Grid.Column="1" Grid.Row="0" Margin="10,10,10,10" TextBlock.FontSize="20" 
+                Click="secondTextLoad_Click">Choose Second Text File</Button>
+        <TextBox Name="file1" Grid.Column="0" Grid.Row="1" Margin="10,10,10,10" TextWrapping="Wrap"></TextBox>
+        <TextBox Name="file2" Grid.Column="1" Grid.Row="1" Margin="10,10,10,10" TextWrapping="Wrap"></TextBox>
+        <Button Name="compare" Grid.Column="0" Grid.Row="2" Margin="10,10,10,10" TextBlock.FontSize="20"
+                Click="compare_Click">Compare Lines</Button>
+        <Button Name="nextLine" Grid.Column="0" Grid.Row="3" Margin="10,10,10,10" TextBlock.FontSize="10" Width="50"
+                HorizontalAlignment="Right" Click="nextLine_Click"> Next</Button>
+        <Button Name="previousLine" Grid.Column="0" Grid.Row="3" Margin="10,10,10,10" TextBlock.FontSize="10" Width="50" 
+                HorizontalAlignment="Left" Click="previousLine_Click">Previous</Button>
+        <TextBox IsReadOnly="True" Name="comparedLines" Grid.Column="0" Grid.Row="3" Margin="10,10,10,10" TextBlock.FontSize="15" 
+                 Width="200" TextAlignment="Center" HorizontalAlignment="Center" TextWrapping="Wrap"></TextBox>
+        <TextBox IsReadOnly="True" Name="comparision_result" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" 
+                 Margin="10,10,10,10" TextWrapping="Wrap"></TextBox>
+    </Grid>
+</Window>
